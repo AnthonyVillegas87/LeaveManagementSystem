@@ -1,0 +1,14 @@
+@using Microsoft.AspNetCore.Server.Kestrel.Core
+@model TestViewModel;
+
+@{
+    ViewData["Title"] = "Test View";
+}
+
+<h1>Test view for Test Controller</h1>
+<h2>Name : @Model.Name</h2>
+
+@if (Model.DateOfBirth.HasValue)
+{
+    <h2>My DOB is : @Model.DateOfBirth</h2>
+}
