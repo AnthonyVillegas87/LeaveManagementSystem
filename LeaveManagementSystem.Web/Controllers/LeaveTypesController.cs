@@ -21,7 +21,9 @@ namespace LeaveManagementSystem.Web.Controllers
         // GET: LeaveTypes
         public async Task<IActionResult> Index()
         {
-            return View(await _context.LeaveTypes.ToListAsync());
+            // SELECT * FROM LeaveTypes
+            var data = await _context.LeaveTypes.ToListAsync();
+            return View(data);
         }
 
         // GET: LeaveTypes/Details/5
@@ -31,7 +33,8 @@ namespace LeaveManagementSystem.Web.Controllers
             {
                 return NotFound();
             }
-
+            // Parameterization - key for preventing SQL Injection attacks
+            // SELECT * FROM LeaveTypes WHERE Id = @id
             var leaveType = await _context.LeaveTypes
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (leaveType == null)
@@ -71,7 +74,7 @@ namespace LeaveManagementSystem.Web.Controllers
             {
                 return NotFound();
             }
-
+            // SELECT * FROM LeaveTypes WHERE Id = @id
             var leaveType = await _context.LeaveTypes.FindAsync(id);
             if (leaveType == null)
             {
@@ -92,27 +95,24 @@ namespace LeaveManagementSystem.Web.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid) return View(leaveType);
+            try
             {
-                try
-                {
-                    _context.Update(leaveType);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!LeaveTypeExists(leaveType.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                _context.Update(leaveType);
+                await _context.SaveChangesAsync();
             }
-            return View(leaveType);
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!LeaveTypeExists(leaveType.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: LeaveTypes/Delete/5
