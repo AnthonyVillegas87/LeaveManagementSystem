@@ -15,6 +15,8 @@ namespace LeaveManagementSystem.Web.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;
+        private const string SickLeaveExceededValidation = "The number of sick leave exceeded.";
+        private const string LeaveTypeNameValidation = "The leave type name already exists.";
 
         public LeaveTypesController(ApplicationDbContext context, IMapper mapper)
         {
@@ -68,14 +70,19 @@ namespace LeaveManagementSystem.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(LeaveTypeCreateVm leaveTypeCreateVm)
         {
-            if (ModelState.IsValid)
+            if (await CheckIfNumberOfDaysExceeded(leaveTypeCreateVm.NumberOfDays))
             {
-                var leaveType = _mapper.Map<LeaveType>(leaveTypeCreateVm);
-                _context.Add(leaveType);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                ModelState.AddModelError("NumberOfDays", SickLeaveExceededValidation);
+            } else if (await CheckIfLeaveTypeNameExists(leaveTypeCreateVm.Name))
+            {
+                ModelState.AddModelError("Name", LeaveTypeNameValidation);
             }
-            return View(leaveTypeCreateVm);
+
+            if (!ModelState.IsValid) return View(leaveTypeCreateVm);
+            var leaveType = _mapper.Map<LeaveType>(leaveTypeCreateVm);
+            _context.Add(leaveType);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: LeaveTypes/Edit/5
@@ -106,6 +113,16 @@ namespace LeaveManagementSystem.Web.Controllers
             if (id != leaveTypeEdit.Id)
             {
                 return NotFound();
+            }
+            
+            
+            
+            if (await CheckIfNumberOfDaysExceeded(leaveTypeEdit.NumberOfDays))
+            {
+                ModelState.AddModelError("NumberOfDays", SickLeaveExceededValidation);
+            } else if (await CheckIfLeaveTypeNameExists(leaveTypeEdit.Name))
+            {
+                ModelState.AddModelError("Name", LeaveTypeNameValidation);
             }
 
             if (!ModelState.IsValid) return View(leaveTypeEdit);
@@ -165,6 +182,22 @@ namespace LeaveManagementSystem.Web.Controllers
         private bool LeaveTypeExists(int id)
         {
             return _context.LeaveTypes.Any(e => e.Id == id);
+        }
+
+        private async Task<bool> CheckIfLeaveTypeNameExists(string name)
+        {
+            var lowerCaseName = name.ToLower();
+            return await _context.LeaveTypes.AnyAsync(e => e.Name.ToLower().Equals(lowerCaseName));
+        }
+
+        private async Task<bool> EditCheckIfLeaveTypeNameExists(LeaveTypeEditVm leaveTypeEdit)
+        {
+            var lowerCaseName = leaveTypeEdit.Name.ToLower();
+            return await _context.LeaveTypes.AnyAsync(e => e.Name.ToLower().Equals(lowerCaseName) && e.Id != leaveTypeEdit.Id);
+        }
+        private async Task<bool> CheckIfNumberOfDaysExceeded(decimal numberOfDays)
+        {
+            return await _context.LeaveTypes.AnyAsync(t => t.NumberOfDays > 24.0m);
         }
     }
 }
