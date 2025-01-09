@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace LeaveManagementSystem.Web.Models.LeaveTypes;
 
-public class LeaveTypeCreateVm
+public class LeaveTypeEditVm : BaseLeaveTypeVm
 {
     [Required]
     [Length(4, 150, ErrorMessage = "Length requirement violation.")]
