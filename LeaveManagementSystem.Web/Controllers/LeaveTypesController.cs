@@ -8,29 +8,21 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LeaveManagementSystem.Web.Data;
 using LeaveManagementSystem.Web.Models.LeaveTypes;
+using LeaveManagementSystem.Web.Services;
 
 namespace LeaveManagementSystem.Web.Controllers
 {
-    public class LeaveTypesController : Controller
+    public class LeaveTypesController(ILeaveTypesService leaveTypesService) : Controller
     {
-        private readonly ApplicationDbContext _context;
-        private readonly IMapper _mapper;
+        
         private const string SickLeaveExceededValidation = "The number of sick leave exceeded.";
         private const string LeaveTypeNameValidation = "The leave type name already exists.";
 
-        public LeaveTypesController(ApplicationDbContext context, IMapper mapper)
-        {
-            _context = context;
-            this._mapper = mapper;
-        }
 
         // GET: LeaveTypes
         public async Task<IActionResult> Index()
         {
-            // SELECT * FROM LeaveTypes
-            var data = await _context.LeaveTypes.ToListAsync();
-            // convert the datamodel into a view model - use AutoMapper
-            var viewData = _mapper.Map<List<LeaveTypeReadOnlyVm>>(data);
+            var viewData = await leaveTypesService.GetAllAsync();
             // return the view model to the view
             return View(viewData);
         }
@@ -42,19 +34,15 @@ namespace LeaveManagementSystem.Web.Controllers
             {
                 return NotFound();
             }
-            // Parameterization - key for preventing SQL Injection attacks
-            // SELECT * FROM LeaveTypes WHERE Id = @id
-            var leaveType = await _context.LeaveTypes
-                .FirstOrDefaultAsync(m => m.Id == id);
+           
+            var leaveType = await leaveTypesService.GetByIdAsync<LeaveTypeReadOnlyVm>(id.Value);
             
             if (leaveType == null)
             {
                 return NotFound();
             }
             
-            var viewData = _mapper.Map<LeaveTypeReadOnlyVm>(leaveType);
-
-            return View(viewData);
+            return View(leaveType);
         }
 
         // GET: LeaveTypes/Create
@@ -70,18 +58,20 @@ namespace LeaveManagementSystem.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(LeaveTypeCreateVm leaveTypeCreateVm)
         {
-            if (await CheckIfNumberOfDaysExceeded(leaveTypeCreateVm.NumberOfDays))
+            if (await leaveTypesService.CheckIfNumberOfDaysExceeded(leaveTypeCreateVm.NumberOfDays))
             {
                 ModelState.AddModelError("NumberOfDays", SickLeaveExceededValidation);
-            } else if (await CheckIfLeaveTypeNameExists(leaveTypeCreateVm.Name))
+            } else if (await leaveTypesService.CheckIfLeaveTypeNameExists(leaveTypeCreateVm.Name))
             {
                 ModelState.AddModelError("Name", LeaveTypeNameValidation);
             }
 
-            if (!ModelState.IsValid) return View(leaveTypeCreateVm);
-            var leaveType = _mapper.Map<LeaveType>(leaveTypeCreateVm);
-            _context.Add(leaveType);
-            await _context.SaveChangesAsync();
+            if (!ModelState.IsValid)
+            {
+                await leaveTypesService.CreateAsync(leaveTypeCreateVm);
+                return View(leaveTypeCreateVm);
+            }
+            
             return RedirectToAction(nameof(Index));
         }
 
@@ -93,14 +83,13 @@ namespace LeaveManagementSystem.Web.Controllers
                 return NotFound();
             }
             // SELECT * FROM LeaveTypes WHERE Id = @id
-            var leaveType = await _context.LeaveTypes.FindAsync(id);
+            var leaveType = await leaveTypesService.GetByIdAsync<LeaveTypeEditVm>(id.Value);
             if (leaveType == null)
             {
                 return NotFound();
             }
             
-            var viewData = _mapper.Map<LeaveTypeEditVm>(leaveType);
-            return View(viewData);
+            return View(leaveType);
         }
 
         // POST: LeaveTypes/Edit/5
@@ -115,12 +104,10 @@ namespace LeaveManagementSystem.Web.Controllers
                 return NotFound();
             }
             
-            
-            
-            if (await CheckIfNumberOfDaysExceeded(leaveTypeEdit.NumberOfDays))
+            if (await leaveTypesService.CheckIfNumberOfDaysExceeded(leaveTypeEdit.NumberOfDays))
             {
                 ModelState.AddModelError("NumberOfDays", SickLeaveExceededValidation);
-            } else if (await CheckIfLeaveTypeNameExists(leaveTypeEdit.Name))
+            } else if (await leaveTypesService.EditCheckIfLeaveTypeNameExists(leaveTypeEdit))
             {
                 ModelState.AddModelError("Name", LeaveTypeNameValidation);
             }
@@ -128,13 +115,12 @@ namespace LeaveManagementSystem.Web.Controllers
             if (!ModelState.IsValid) return View(leaveTypeEdit);
             try
             {
-                var leaveType = _mapper.Map<LeaveType>(leaveTypeEdit);
-                _context.Update(leaveType);
-                await _context.SaveChangesAsync();
+                
+                await leaveTypesService.EditAsync(leaveTypeEdit);
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!LeaveTypeExists(leaveTypeEdit.Id))
+                if (!leaveTypesService.LeaveTypeExists(leaveTypeEdit.Id))
                 {
                     return NotFound();
                 }
@@ -154,14 +140,12 @@ namespace LeaveManagementSystem.Web.Controllers
                 return NotFound();
             }
 
-            var leaveType = await _context.LeaveTypes
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var leaveType = await leaveTypesService.GetByIdAsync<LeaveTypeReadOnlyVm>(id.Value);
             if (leaveType == null)
             {
                 return NotFound();
             }
-            var viewData = _mapper.Map<LeaveTypeReadOnlyVm>(leaveType);
-            return View(viewData);
+            return View(leaveType);
         }
 
         // POST: LeaveTypes/Delete/5
@@ -169,35 +153,10 @@ namespace LeaveManagementSystem.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var leaveType = await _context.LeaveTypes.FindAsync(id);
-            if (leaveType != null)
-            {
-                _context.LeaveTypes.Remove(leaveType);
-            }
-
-            await _context.SaveChangesAsync();
+            await leaveTypesService.RemoveByIdAsync(id);
             return RedirectToAction(nameof(Index));
         }
 
-        private bool LeaveTypeExists(int id)
-        {
-            return _context.LeaveTypes.Any(e => e.Id == id);
-        }
-
-        private async Task<bool> CheckIfLeaveTypeNameExists(string name)
-        {
-            var lowerCaseName = name.ToLower();
-            return await _context.LeaveTypes.AnyAsync(e => e.Name.ToLower().Equals(lowerCaseName));
-        }
-
-        private async Task<bool> EditCheckIfLeaveTypeNameExists(LeaveTypeEditVm leaveTypeEdit)
-        {
-            var lowerCaseName = leaveTypeEdit.Name.ToLower();
-            return await _context.LeaveTypes.AnyAsync(e => e.Name.ToLower().Equals(lowerCaseName) && e.Id != leaveTypeEdit.Id);
-        }
-        private async Task<bool> CheckIfNumberOfDaysExceeded(decimal numberOfDays)
-        {
-            return await _context.LeaveTypes.AnyAsync(t => t.NumberOfDays > 24.0m);
-        }
+       
     }
 }
