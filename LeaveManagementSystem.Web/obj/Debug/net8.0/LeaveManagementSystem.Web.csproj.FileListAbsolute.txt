@@ -279,3 +279,4 @@
 /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/obj/Debug/net8.0/LeaveManagementSystem.Web.pdb
 /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/obj/Debug/net8.0/LeaveManagementSystem.Web.genruntimeconfig.cache
 /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/obj/Debug/net8.0/ref/LeaveManagementSystem.Web.dll
+/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/bin/Debug/net8.0/AutoMapper.dll
