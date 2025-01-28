@@ -1,4 +1,5 @@
 using AutoMapper;
+using LeaveManagementSystem.Web.Common;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LeaveManagementSystem.Web.Data;
@@ -7,6 +8,7 @@ using LeaveManagementSystem.Web.Services;
 
 namespace LeaveManagementSystem.Web.Controllers
 {
+    [Authorize(Roles = Roles.Administrator)]
     public class LeaveTypesController(ILeaveTypesService leaveTypesService) : Controller
     {
         
