@@ -1,6 +1,8 @@
 using System.Reflection;
 using LeaveManagementSystem.Web.Data;
 using LeaveManagementSystem.Web.Services;
+using LeaveManagementSystem.Web.Services.LeaveAllocations;
+using LeaveManagementSystem.Web.Services.LeaveTypes;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,9 +14,12 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
-builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
 builder.Services.AddScoped<ILeaveTypesService, LeaveTypesService>();
+builder.Services.AddScoped<ILeaveAllocationsService, LeaveAllocationsService>();
 builder.Services.AddTransient<IEmailSender, EmailSender>();
+
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddControllersWithViews();
 
 

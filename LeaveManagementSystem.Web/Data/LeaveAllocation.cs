@@ -11,5 +11,5 @@ public class LeaveAllocation : BaseEntity
     public string EmployeeId { get; set; }
     public Period Period { get; set; }
     public int PeriodId { get; set; }
-    public int Days { get; set; }
+    public decimal Days { get; set; }
 }

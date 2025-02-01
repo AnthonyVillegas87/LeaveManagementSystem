@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace LeaveManagementSystem.Web.Models.LeaveTypes;
 
 public class LeaveTypeCreateVm
