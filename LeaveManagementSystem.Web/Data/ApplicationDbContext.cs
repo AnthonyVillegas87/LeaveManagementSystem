@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using LeaveManagementSystem.Web.Data;
 
 namespace LeaveManagementSystem.Web.Data;
 
@@ -55,9 +56,9 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
                 UserId = "df7cd3e7-b3c2-44d0-9027-aad95c5b89c5",
             });
     }
-
     public DbSet<LeaveType> LeaveTypes { get; set; }
     public DbSet<LeaveAllocation> LeaveAllocations { get; set; }
     public DbSet<Period> Periods { get; set; }
+
     
 }
