@@ -3,6 +3,7 @@
 #nullable disable
 
 using System.Collections.Immutable;
+using LeaveManagementSystem.Web.Services.LeaveAllocations;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
@@ -10,6 +11,7 @@ namespace LeaveManagementSystem.Web.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
+        ILeaveAllocationsService _leaveAllocationsService;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly UserManager<ApplicationUser> _userManager;
@@ -19,6 +21,7 @@ namespace LeaveManagementSystem.Web.Areas.Identity.Pages.Account
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
+            ILeaveAllocationsService leaveAllocationsService,
             UserManager<ApplicationUser> userManager,
             IUserStore<ApplicationUser> userStore,
             SignInManager<ApplicationUser> signInManager,
@@ -26,6 +29,7 @@ namespace LeaveManagementSystem.Web.Areas.Identity.Pages.Account
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
+            _leaveAllocationsService = leaveAllocationsService;
             _userManager = userManager;
             _roleManager = roleManager;
             _userStore = userStore;
@@ -147,10 +151,12 @@ namespace LeaveManagementSystem.Web.Areas.Identity.Pages.Account
                     }
                     else
                     {
-                        await _userManager.AddToRoleAsync(user, "Employee");
+                        await _userManager.AddToRoleAsync(user, Roles.Employee);
                     }
 
                     var userId = await _userManager.GetUserIdAsync(user);
+                    await _leaveAllocationsService.AllocateLeave(userId);
+                    
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(
