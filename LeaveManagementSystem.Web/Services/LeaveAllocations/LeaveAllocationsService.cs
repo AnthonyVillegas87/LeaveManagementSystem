@@ -26,29 +26,32 @@ public class LeaveAllocationsService(ApplicationDbContext context, IHttpContextA
                 EmployeeId = employeeId,
                 LeaveTypeId = leaveType.Id,
                 PeriodId = period.Id,
-                Days = accrualRate * monthsRemaining,
+                Days = accrualRate * monthsRemaining
             };
             context.Add(leaveAllocation);
         }
         await context.SaveChangesAsync();
     }
 
-    public async Task<List<LeaveAllocation>> GetLeaveAllocations()
+    public async Task<List<LeaveAllocation>> GetLeaveAllocations(int? employeeId)
     {
 
         var user = await _userManager.GetUserAsync(_httpContextAccessor.HttpContext?.User);
+        // if
+        var currentDate = DateTime.Now;
+        // var period = await  context.Periods.SingleOrDefaultAsync(q => q.EndDate.Year == currentDate.Year);
         var leaveAllocations = await context.LeaveAllocations
             .Include(q => q.LeaveType)
             .Include(q => q.Period)
-            .Where(q => q.EmployeeId == user.Id)
+            .Where(q => q.EmployeeId == user.Id && q.Period.EndDate.Year == currentDate.Year)
             .ToListAsync();
         
         return leaveAllocations;
     }
 
-    public async Task<EmployeeAllocationVm> GetEmployeeAllocation()
+    public async Task<EmployeeAllocationVm> GetEmployeeAllocation(int? employeeId)
     {
-        var allocations = await GetLeaveAllocations();
+        var allocations = await GetLeaveAllocations(employeeId);
         var allocationVmList = _mapper.Map<List<LeaveAllocation>, List<LeaveAllocationVm>>(allocations);
         
         var user = await _userManager.GetUserAsync(_httpContextAccessor.HttpContext?.User);
@@ -63,5 +66,12 @@ public class LeaveAllocationsService(ApplicationDbContext context, IHttpContextA
         };
         
         return employeeVm;
+    }
+
+    public async Task<List<EmployeeListVm>> GetEmployees()
+    {
+        var users = await _userManager.GetUsersInRoleAsync(Roles.Employee);
+        var employees = _mapper.Map<List<ApplicationUser>, List<EmployeeListVm>>(users.ToList());
+        return employees;
     }
 }

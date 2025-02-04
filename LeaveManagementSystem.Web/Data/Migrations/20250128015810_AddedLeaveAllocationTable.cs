@@ -35,7 +35,7 @@ namespace LeaveManagementSystem.Web.Data.Migrations
                     LeaveTypeId = table.Column<int>(type: "int", nullable: false),
                     EmployeeId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     PeriodId = table.Column<int>(type: "int", nullable: false),
-                    Days = table.Column<int>(type: "int", nullable: false)
+                    Days = table.Column<decimal>(type: "decimal", nullable: false)
                 },
                 constraints: table =>
                 {
