@@ -4,13 +4,15 @@
 
 @{
     ViewData["Title"] = "View Allocations";
+    var isAdmin = User.IsInRole(Roles.Administrator);
+    string message = isAdmin ? "There are no allocations" : "You have no allocations. Please contact your administrator.";
 }
 
 <h1>View Allocations for @Model.FirstName @Model.LastName</h1>
 
 <div>
     <hr />
-    <dl>
+    <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.FirstName)
         </dt>
@@ -38,6 +40,11 @@
     </dl>
 </div>
 <hr />
+@if (isAdmin && !Model.IsCompletedAllocation)
+{
+    <a class="btn btn-warning" asp-action="AllocateLeave" asp-route-employeeId="@Model.Id">Allocate Leave</a>
+    <br/>
+}
 @if (Model.LeaveAllocations.Any())
 {
     <div class="card">
@@ -70,14 +77,12 @@
                     </div>
                 </li>
             }
-
-
         </ul>
     </div>
 }
 else
 {
     <div class="alert alert-warning" role="alert">
-        <h2>You have no leave allocations. Please contact your Administrator</h2>
+        <h2>@message</h2>
     </div>
 }

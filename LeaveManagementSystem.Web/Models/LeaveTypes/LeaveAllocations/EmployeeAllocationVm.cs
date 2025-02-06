@@ -6,5 +6,7 @@ public class EmployeeAllocationVm : EmployeeListVm
     [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
     [DataType(DataType.Date)]
     public DateOnly DateOfBirth { get; set; }
+    
+    public bool IsCompletedAllocation { get; set; }
     public List<LeaveAllocationVm> LeaveAllocations { get; set; }
 }

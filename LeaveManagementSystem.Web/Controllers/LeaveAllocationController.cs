@@ -5,19 +5,24 @@ namespace LeaveManagementSystem.Web.Controllers;
 
 public class LeaveAllocationController(ILeaveAllocationsService _leaveAllocationsService) : Controller
 {
-    [Authorize(Roles.Administrator)]
+    [Authorize(Roles = Roles.Administrator)]
     public async Task<IActionResult> Index()
     {
         var employees = await _leaveAllocationsService.GetEmployees();
         return View(employees);
     }
     
-    
-    [Authorize]
-    // GET
-    public async Task<IActionResult> Details(int? id)
+    [Authorize(Roles = Roles.Administrator)]
+    public async Task<IActionResult> AllocateLeave(string employeeId)
     {
-        var employeeVm = await _leaveAllocationsService.GetEmployeeAllocation(id);
+         await _leaveAllocationsService.AllocateLeave(employeeId);
+        return RedirectToAction(nameof(Details), new { id = employeeId });
+    }
+    
+    // GET
+    public async Task<IActionResult> Details(string? employeeId)
+    {
+        var employeeVm = await _leaveAllocationsService.GetEmployeeAllocation(employeeId);
         return View(employeeVm);
     }
 }

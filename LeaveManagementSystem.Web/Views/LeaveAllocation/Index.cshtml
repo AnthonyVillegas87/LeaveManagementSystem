@@ -6,7 +6,7 @@
 
 <h1>Employees</h1>
 
-<table>
+<table class="table">
     <thead>
     <tr>
         <th>
@@ -36,7 +36,7 @@
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.Id">View Allocations</a>
+                <a asp-action="Details" class="btn btn-primary" asp-route-employeeId="@item.Id">View Allocations</a>
             </td>
         </tr>
     }
