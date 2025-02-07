@@ -13,16 +13,33 @@ public class LeaveAllocationController(ILeaveAllocationsService _leaveAllocation
     }
     
     [Authorize(Roles = Roles.Administrator)]
-    public async Task<IActionResult> AllocateLeave(string employeeId)
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> AllocateLeave(string? id)
     {
-         await _leaveAllocationsService.AllocateLeave(employeeId);
-        return RedirectToAction(nameof(Details), new { id = employeeId });
+         await _leaveAllocationsService.AllocateLeave(id);
+        return RedirectToAction(nameof(Details), new { employeeId = id } );
+    }
+
+    public async Task<IActionResult> EditAllocation(int? id)
+    {
+        if (id == null)
+        {
+            return NotFound();
+        }
+
+        var allocation = await _leaveAllocationsService.GetEmployeeAllocation(id.Value);
+        if (allocation == null)
+        {
+            return NotFound();
+        }
+        return View(allocation);
     }
     
     // GET
     public async Task<IActionResult> Details(string? employeeId)
     {
-        var employeeVm = await _leaveAllocationsService.GetEmployeeAllocation(employeeId);
+        var employeeVm = await _leaveAllocationsService.GetEmployeeAllocations(employeeId);
         return View(employeeVm);
     }
 }

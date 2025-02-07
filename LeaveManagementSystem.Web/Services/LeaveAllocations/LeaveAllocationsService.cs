@@ -60,7 +60,7 @@ public class LeaveAllocationsService(ApplicationDbContext context, IHttpContextA
         return leaveAllocations;
     }
 
-    public async Task<EmployeeAllocationVm> GetEmployeeAllocation(string? employeeId)
+    public async Task<EmployeeAllocationVm> GetEmployeeAllocations(string? employeeId)
     {
         var user = string.IsNullOrEmpty(employeeId) ? await _userManager.GetUserAsync(_httpContextAccessor.HttpContext?.User) : await _userManager.FindByIdAsync(employeeId);
         var allocations = await GetLeaveAllocations(employeeId);
@@ -79,6 +79,16 @@ public class LeaveAllocationsService(ApplicationDbContext context, IHttpContextA
         };
         
         return employeeVm;
+    }
+
+    public async Task<LeaveAllocationEditVm> GetEmployeeAllocation(int allocationId)
+    {
+        var allocation = await context.LeaveAllocations
+            .Include(q => q.LeaveType)
+            .Include(q => q.Employee)
+            .FirstOrDefaultAsync(q => q.Id == allocationId);
+        var model = _mapper.Map<LeaveAllocationEditVm>(allocation);
+        return model;
     }
 
     public async Task<List<EmployeeListVm>> GetEmployees()
