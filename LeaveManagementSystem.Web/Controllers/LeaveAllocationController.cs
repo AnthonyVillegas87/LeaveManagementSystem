@@ -1,3 +1,4 @@
+using LeaveManagementSystem.Web.Models.LeaveTypes.LeaveAllocations;
 using LeaveManagementSystem.Web.Services.LeaveAllocations;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +22,7 @@ public class LeaveAllocationController(ILeaveAllocationsService _leaveAllocation
         return RedirectToAction(nameof(Details), new { employeeId = id } );
     }
 
+    
     public async Task<IActionResult> EditAllocation(int? id)
     {
         if (id == null)
@@ -34,6 +36,14 @@ public class LeaveAllocationController(ILeaveAllocationsService _leaveAllocation
             return NotFound();
         }
         return View(allocation);
+    }
+    
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> EditAllocation(LeaveAllocationEditVm model)
+    {
+        await _leaveAllocationsService.EditAllocation(model);
+        return RedirectToAction(nameof(Details), new { employeeId = model.EmployeeList.Id});
     }
     
     // GET

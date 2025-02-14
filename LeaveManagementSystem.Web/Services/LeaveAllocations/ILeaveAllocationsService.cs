@@ -9,4 +9,5 @@ public interface ILeaveAllocationsService
     Task<EmployeeAllocationVm> GetEmployeeAllocations(string? employeeId);
     Task<LeaveAllocationEditVm> GetEmployeeAllocation(int allocationId);
     Task<List<EmployeeListVm>> GetEmployees();
+    Task EditAllocation(LeaveAllocationEditVm model);
 }
