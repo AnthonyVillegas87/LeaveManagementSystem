@@ -194,6 +194,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/Views/LeaveAllocation/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGVhdmVBbGxvY2F0aW9uL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/Views/LeaveAllocation/EditAllocation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGVhdmVBbGxvY2F0aW9uL0VkaXRBbGxvY2F0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/Views/LeaveAllocation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGVhdmVBbGxvY2F0aW9uL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/Views/LeaveTypes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGVhdmVUeXBlcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
