@@ -13,4 +13,5 @@ public interface ILeaveTypesService
     Task<bool> CheckIfLeaveTypeNameExists(string name);
     Task<bool> EditCheckIfLeaveTypeNameExists(LeaveTypeEditVm leaveTypeEdit);
     Task<bool> CheckIfNumberOfDaysExceeded(decimal numberOfDays);
+   Task<bool> MaxDaysExceededAsync(int leaveTypeId, decimal modelDays);
 }

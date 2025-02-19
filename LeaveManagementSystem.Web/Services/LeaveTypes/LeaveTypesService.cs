@@ -49,8 +49,12 @@ public class LeaveTypesService(ApplicationDbContext context, IMapper mapper) : I
         context.Add(leaveType);
         await context.SaveChangesAsync();
     }
-    
-    
+
+    public async Task<bool> MaxDaysExceededAsync(int leaveTypeId, decimal days)
+    {
+        var leaveType = await context.LeaveTypes.FindAsync(leaveTypeId);
+        return leaveType.NumberOfDays < days;
+    }
     
     public bool LeaveTypeExists(int id)
     {

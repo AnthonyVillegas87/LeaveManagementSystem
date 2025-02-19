@@ -1,4 +1,4 @@
-using LeaveManagementSystem.Web.Models.LeaveTypes.LeaveAllocations;
+using LeaveManagementSystem.Web.Models.LeaveAllocations;
 
 namespace LeaveManagementSystem.Web.Services.LeaveAllocations;
 

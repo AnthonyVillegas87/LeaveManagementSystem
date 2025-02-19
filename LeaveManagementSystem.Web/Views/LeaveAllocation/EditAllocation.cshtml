@@ -1,4 +1,4 @@
-@model LeaveAllocationEditVm
+@model LeaveManagementSystem.Web.Models.LeaveAllocations.LeaveAllocationEditVm
 
 @{
     ViewData["Title"] = "Edit Allocations";
@@ -12,6 +12,7 @@
         <form asp-action="EditAllocation">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id"/>
+            <input type="hidden" asp-for="LeaveType.Id"/>
             <input type="hidden" asp-for="EmployeeList.Id"/>
 
             <div class="form-group">

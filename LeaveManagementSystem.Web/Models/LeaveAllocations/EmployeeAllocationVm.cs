@@ -1,4 +1,4 @@
-namespace LeaveManagementSystem.Web.Models.LeaveTypes.LeaveAllocations;
+namespace LeaveManagementSystem.Web.Models.LeaveAllocations;
 
 public class EmployeeAllocationVm : EmployeeListVm
 {

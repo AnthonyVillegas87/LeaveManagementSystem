@@ -1,6 +1,7 @@
+using LeaveManagementSystem.Web.Models.LeaveTypes;
 using LeaveManagementSystem.Web.Models.Periods;
 
-namespace LeaveManagementSystem.Web.Models.LeaveTypes.LeaveAllocations;
+namespace LeaveManagementSystem.Web.Models.LeaveAllocations;
 
 public class LeaveAllocationVm
 {
