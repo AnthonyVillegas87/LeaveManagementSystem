@@ -24,4 +24,8 @@
       <Content Include="bin\Release\net8.0\Microsoft.DiaSymReader.dll" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Pages\" />
+    </ItemGroup>
+
 </Project>

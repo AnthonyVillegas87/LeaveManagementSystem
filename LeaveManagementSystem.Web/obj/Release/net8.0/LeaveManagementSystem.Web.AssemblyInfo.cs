@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LeaveManagementSystem.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e25bdaf861267d9404d25d27feb062b85a20a055")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0abaa5e310f5bfd0ae0a7530d2a1e3025e5400e9")]
 [assembly: System.Reflection.AssemblyProductAttribute("LeaveManagementSystem.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LeaveManagementSystem.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

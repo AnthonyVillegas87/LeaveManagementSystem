@@ -2,7 +2,7 @@ namespace LeaveManagementSystem.Web.Services.LeaveRequests;
 
 public class LeaveRequestsService : ILeaveRequestService
 {
-    public Task CreateLeaveRequest(LeaveRequestCreateVM model)
+    public Task CreateLeaveRequest(LeaveRequestCreateVm model)
     {
         throw new NotImplementedException();
     }
