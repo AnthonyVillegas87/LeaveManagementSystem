@@ -1,3 +1,5 @@
+using LeaveManagementSystem.Web.Models.LeaveRequests;
+
 namespace LeaveManagementSystem.Web.Services.LeaveRequests;
 
 public interface ILeaveRequestService
@@ -5,6 +7,7 @@ public interface ILeaveRequestService
     Task CreateLeaveRequest(LeaveRequestCreateVm model);
     Task<EmployeeLeaveRequestListVM> GetEmployeeLeaveRequests();
     Task<LeaveRequestListVM> GetAllLeaveRequests();
-    Task CancelLaveRequest(int id);
-    Task ReviewLaveRequest(ReviewLeaveRequestVM model);
+    Task CancelLeaveRequest(int id);
+    Task ReviewLeaveRequest(ReviewLeaveRequestVM model);
+    Task<bool> RequestDatesExceedAllocation(LeaveRequestCreateVm model);
 }

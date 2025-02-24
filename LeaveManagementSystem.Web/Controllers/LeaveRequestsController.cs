@@ -1,3 +1,4 @@
+using LeaveManagementSystem.Web.Models.LeaveRequests;
 using LeaveManagementSystem.Web.Services.LeaveRequests;
 using LeaveManagementSystem.Web.Services.LeaveTypes;
 using Microsoft.AspNetCore.Mvc;
@@ -32,6 +33,11 @@ public class LeaveRequestsController(ILeaveTypesService leaveTypesService, ILeav
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(LeaveRequestCreateVm model)
     {
+        if (await leaveRequestService.RequestDatesExceedAllocation(model))
+        {
+            ModelState.AddModelError(string.Empty, "The number of leave requests exceeds the allocation.");
+            ModelState.AddModelError(nameof(model.EndDate), "End date cannot be in the future.");
+        }
         if (ModelState.IsValid)
         {
             await leaveRequestService.CreateLeaveRequest(model);

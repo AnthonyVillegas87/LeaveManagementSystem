@@ -1,5 +1,7 @@
 using AutoMapper;
+using LeaveManagementSystem.Web.Models.LeaveRequests;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Abstractions;
 
 namespace LeaveManagementSystem.Web.Services.LeaveRequests;
 
@@ -42,14 +44,24 @@ public partial class LeaveRequestsService(IMapper mapper, UserManager<Applicatio
         throw new NotImplementedException();
     }
 
-    public Task CancelLaveRequest(int id)
+    public Task CancelLeaveRequest(int id)
     {
         throw new NotImplementedException();
     }
 
-    public Task ReviewLaveRequest(ReviewLeaveRequestVM model)
+    public Task ReviewLeaveRequest(ReviewLeaveRequestVM model)
     {
         throw new NotImplementedException();
+    }
+
+    public async Task<bool> RequestDatesExceedAllocation(LeaveRequestCreateVm model)
+    {
+        var user = await userManager.GetUserAsync(httpContextAccessor.HttpContext?.User);
+        var numberOfDays = model.EndDate.DayNumber - model.StartDate.DayNumber;
+        var allocation = await context.LeaveAllocations
+            .FirstAsync(q => q.LeaveTypeId == model.LeaveTypeId && q.EmployeeId == user.Id);
+        
+        return allocation.Days < numberOfDays;
     }
 }
 

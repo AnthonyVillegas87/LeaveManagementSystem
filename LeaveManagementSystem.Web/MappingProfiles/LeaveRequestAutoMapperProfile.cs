@@ -1,5 +1,6 @@
 using AutoMapper;
 using LeaveManagementSystem.Web.Models.LeaveAllocations;
+using LeaveManagementSystem.Web.Models.LeaveRequests;
 using LeaveManagementSystem.Web.Models.LeaveTypes;
 using LeaveManagementSystem.Web.Models.Periods;
 using LeaveManagementSystem.Web.Services.LeaveRequests;
