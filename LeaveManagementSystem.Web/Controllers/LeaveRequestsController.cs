@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace LeaveManagementSystem.Web.Controllers;
 
-public class LeaveRequestsController(ILeaveTypesService leaveTypesService) : Controller
+public class LeaveRequestsController(ILeaveTypesService leaveTypesService, ILeaveRequestService leaveRequestService) : Controller
 {
     // Employee View requests
     public async Task<IActionResult> Index()
@@ -29,13 +29,21 @@ public class LeaveRequestsController(ILeaveTypesService leaveTypesService) : Con
     
     // Employee Create requests
     [HttpPost]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(LeaveRequestCreateVm model)
     {
-        return View();
+        if (ModelState.IsValid)
+        {
+            await leaveRequestService.CreateLeaveRequest(model);
+        }
+        var leaveTypes = await leaveTypesService.GetAllAsync();
+        model.LeaveTypes = new SelectList(leaveTypes, "Id", "Name");
+        return View(model);
     }
     
     // Employee Cancel requests
     [HttpPost]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> Cancel(int leaveRequestId)
     {
         return View();
@@ -55,6 +63,7 @@ public class LeaveRequestsController(ILeaveTypesService leaveTypesService) : Con
     
     // Admin/Supervisor requests
     [HttpPost]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> Review(/*VM use*/)
     {
         return View();
