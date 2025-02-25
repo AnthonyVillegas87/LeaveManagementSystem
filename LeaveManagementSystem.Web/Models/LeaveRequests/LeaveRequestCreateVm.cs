@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace LeaveManagementSystem.Web.Models.LeaveRequests
 {
-    public class LeaveRequestCreateVm
+    public class LeaveRequestCreateVm : IValidatableObject
     {
         [DisplayName("Start Date")]
         [Required]
@@ -19,7 +19,14 @@ namespace LeaveManagementSystem.Web.Models.LeaveRequests
 
         [DisplayName("Additional Information")]
         public string? RequestComments { get; set; }
-
         public SelectList? LeaveTypes { get; set; }
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if (StartDate > EndDate) 
+            {
+                yield return new ValidationResult("Start date must be before end date", [nameof(StartDate), nameof(EndDate)
+                ]);
+            }
+        }
     }
 }

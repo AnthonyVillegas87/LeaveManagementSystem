@@ -18,7 +18,7 @@ public partial class LeaveRequestsService(IMapper mapper, UserManager<Applicatio
        leaveRequest.EmployeeId = user.Id;
        
        // set LeaveRequestStatusId 
-       leaveRequest.LeaveRequestStatusId = (int) LeaveRequestStatus.Pending;
+       leaveRequest.LeaveRequestStatusId = (int) LeaveRequestStatusEnum.Pending;
        
        // save leave request to the db
        context.Add(leaveRequest);
@@ -28,7 +28,7 @@ public partial class LeaveRequestsService(IMapper mapper, UserManager<Applicatio
        var allocationToDeduct = await context.LeaveAllocations
            .FirstAsync(q => q.LeaveTypeId == model.LeaveTypeId && q.EmployeeId == user.Id);
        
-       allocationToDeduct.Days =- numberOfDays;
+       allocationToDeduct.Days -= numberOfDays;
        await context.SaveChangesAsync();
 
     }
