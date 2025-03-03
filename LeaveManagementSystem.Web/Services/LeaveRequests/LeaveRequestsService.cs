@@ -58,9 +58,18 @@ public partial class LeaveRequestsService(IMapper mapper, UserManager<Applicatio
         throw new NotImplementedException();
     }
 
-    public Task CancelLeaveRequest(int id)
+    public async Task CancelLeaveRequest(int id)
     {
-        throw new NotImplementedException();
+       var leaveRequest = await context.LeaveRequest.FindAsync(id);
+       leaveRequest.LeaveRequestStatusId = (int) LeaveRequestStatusEnum.Canceled;
+       
+       var numberOfDays = leaveRequest.EndDate.DayNumber - leaveRequest.StartDate.DayNumber;
+       var allocation = await context.LeaveAllocations
+           .FirstAsync(q => q.LeaveTypeId == leaveRequest.LeaveTypeId && q.EmployeeId == leaveRequest.EmployeeId);
+       
+       allocation.Days += numberOfDays;
+       
+       await context.SaveChangesAsync();
     }
 
     public Task ReviewLeaveRequest(ReviewLeaveRequestVM model)
