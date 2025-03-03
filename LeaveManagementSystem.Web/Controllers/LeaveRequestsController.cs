@@ -11,7 +11,8 @@ public class LeaveRequestsController(ILeaveTypesService leaveTypesService, ILeav
     // Employee View requests
     public async Task<IActionResult> Index()
     {
-        return View();
+        var model = await leaveRequestService.GetEmployeeLeaveRequests();
+        return View(model);
     }
     
     // Employee Create requests
