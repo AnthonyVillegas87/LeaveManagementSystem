@@ -53,9 +53,29 @@ public partial class LeaveRequestsService(IMapper mapper, UserManager<Applicatio
         return model;
     }
 
-    public Task<LeaveRequestListVM> GetAllLeaveRequests()
+    public async Task<EmployeeLeaveRequestListVM> GetAllLeaveRequests()
     {
-        throw new NotImplementedException();
+        var leaveRequests = await context.LeaveRequest
+            .Include(q => q.Type)
+            .ToListAsync();
+        var leaveRequestModels = leaveRequests.Select(q => new LeaveRequestListVM
+        {
+            StartDate = q.StartDate,
+            EndDate = q.EndDate,
+            Id = q.Id,
+            LeaveRequestStatus = (LeaveRequestStatusEnum) q.LeaveRequestStatusId,
+            NumberOfDays = q.EndDate.DayNumber - q.StartDate.DayNumber,
+        }).ToList();
+        
+        var model = new EmployeeLeaveRequestListVM
+        {
+            ApprovedRequests = leaveRequests.Count(q => q.LeaveRequestStatusId == (int)LeaveRequestStatusEnum.Approved),
+            PendingRequests = leaveRequests.Count(q => q.LeaveRequestStatusId == (int)LeaveRequestStatusEnum.Pending),
+            DeclinedRequests = leaveRequests.Count(q => q.LeaveRequestStatusId == (int)LeaveRequestStatusEnum.Declined),
+            TotalNumberOfRequests = leaveRequests.Count,
+            LeaveRequests = leaveRequestModels
+        };
+        return model;
     }
 
     public async Task CancelLeaveRequest(int id)
