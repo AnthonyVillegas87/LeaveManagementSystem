@@ -1,0 +1,128 @@
+@using LeaveManagementSystem.Web.Services.LeaveRequests
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model EmployeeLeaveRequestListVM
+
+@{
+    ViewData["Title"] = "View Leave Requests";
+}
+
+<h1>Admin Leave Requests View</h1>
+
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <div class="card-body text-center">
+                <h1 class="card-title text-primary">@Model.TotalNumberOfRequests</h1>
+                <h5 class="card-text">@Html.DisplayNameFor(model => model.TotalNumberOfRequests)</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-body text-center">
+                <h1 class="card-title text-success">@Model.ApprovedRequests</h1>
+                <h5 class="card-text">@Html.DisplayNameFor(model => model.TotalNumberOfRequests)</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-body text-center">
+                <h1 class="card-title text-warning">@Model.PendingRequests</h1>
+                <h5 class="card-text">@Html.DisplayNameFor(model => model.TotalNumberOfRequests)</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-body text-center">
+                <h1 class="card-title text-danger">@Model.DeclinedRequests</h1>
+                <h5 class="card-text">@Html.DisplayNameFor(model => model.TotalNumberOfRequests)</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-body text-center">
+                <h1 class="card-title text-primary">@Model.TotalNumberOfRequests</h1>
+                <h5 class="card-text">@Html.DisplayNameFor(model => model.TotalNumberOfRequests)</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@if (Model.LeaveRequests.Count == 0)
+{
+    <div class="alert alert-info">
+        <h3>There are no requests at this time</h3>
+    </div>
+}
+else
+{
+<hr/>
+<h2>Leave Requests</h2>
+<hr/>
+<p>
+    <a asp-action="Create" class="btn btn-primary">Request Leave</a>
+</p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LeaveRequests[0].LeaveType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LeaveRequests[0].StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LeaveRequests[0].EndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LeaveRequests[0].NumberOfDays)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LeaveRequests[0].LeaveRequestStatus)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.LeaveRequests)
+    {
+    var className = item.LeaveRequestStatus switch
+    {
+    LeaveRequestStatusEnum.Pending => "warning",
+    LeaveRequestStatusEnum.Approved => "approved",
+    LeaveRequestStatusEnum.Declined => "danger",
+    LeaveRequestStatusEnum.Canceled => "dark",
+    _ => string.Empty
+    };
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LeaveType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfDays)
+        </td>
+        <td>
+            <span class="badge rounded-pill bg-@className">@item.LeaveRequestStatus.ToString()</span>
+        </td>
+        <td>
+            @if (item.LeaveRequestStatus == LeaveRequestStatusEnum.Pending)
+            {
+                <button data-id="@item.Id" class="btn btn-danger">Review</button>
+            }
+        </td>
+    </tr>
+    }
+    </tbody>
+</table>
+    
+}
