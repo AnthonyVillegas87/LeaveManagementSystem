@@ -117,7 +117,7 @@ else
         <td>
             @if (item.LeaveRequestStatus == LeaveRequestStatusEnum.Pending)
             {
-                <button data-id="@item.Id" class="btn btn-danger">Review</button>
+                <a asp-action="Review" data-id="@item.Id" class="btn btn-check">Review</a>
             }
         </td>
     </tr>

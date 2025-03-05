@@ -61,14 +61,15 @@ public class LeaveRequestsController(ILeaveTypesService leaveTypesService, ILeav
     // Admin/Supervisor review requests
     public async Task<IActionResult> ListRequests()
     {
-        var model = leaveRequestService.GetEmployeeLeaveRequests();
+        var model = await leaveRequestService.GetAllLeaveRequests();
         return View(model);
     }
     
     // Admin/Supervisor requests
     public async Task<IActionResult> Review(int leaveRequestId)
     {
-        return View();
+        var model = await leaveRequestService.GetLeaveRequestForReview(leaveRequestId);
+        return View(model);
     }
     
     // Admin/Supervisor requests

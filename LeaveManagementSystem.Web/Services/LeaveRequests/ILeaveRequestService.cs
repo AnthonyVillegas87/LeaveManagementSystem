@@ -10,4 +10,5 @@ public interface ILeaveRequestService
     Task CancelLeaveRequest(int id);
     Task ReviewLeaveRequest(ReviewLeaveRequestVM model);
     Task<bool> RequestDatesExceedAllocation(LeaveRequestCreateVm model);
+    Task<ReviewLeaveRequestVM> GetLeaveRequestForReview(int id);
 }

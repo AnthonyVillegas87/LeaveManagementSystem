@@ -1,4 +1,5 @@
 using AutoMapper;
+using LeaveManagementSystem.Web.Models.LeaveAllocations;
 using LeaveManagementSystem.Web.Models.LeaveRequests;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Abstractions;
@@ -105,6 +106,31 @@ public partial class LeaveRequestsService(IMapper mapper, UserManager<Applicatio
             .FirstAsync(q => q.LeaveTypeId == model.LeaveTypeId && q.EmployeeId == user.Id);
         
         return allocation.Days < numberOfDays;
+    }
+
+    public async Task<ReviewLeaveRequestVM> GetLeaveRequestForReview(int id)
+    {
+        var leaveRequest = await context.LeaveRequest
+            .Include(q => q.Type)
+            .FirstAsync(q => q.Id == id);
+        var user = await userManager.FindByIdAsync(leaveRequest.EmployeeId);
+        var model = new ReviewLeaveRequestVM
+        {
+            StartDate = leaveRequest.StartDate,
+            EndDate = leaveRequest.EndDate,
+            Id = leaveRequest.Id,
+            LeaveRequestStatus = (LeaveRequestStatusEnum)leaveRequest.LeaveRequestStatusId,
+            NumberOfDays = leaveRequest.EndDate.DayNumber - leaveRequest.StartDate.DayNumber,
+            LeaveType = leaveRequest.Type?.Name,
+            Employee = new EmployeeListVm()
+            {
+                Id = leaveRequest.EmployeeId,
+                Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+            }
+        };
+        return model;
     }
 }
 
