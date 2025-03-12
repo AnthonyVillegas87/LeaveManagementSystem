@@ -21,7 +21,7 @@
         <div class="card">
             <div class="card-body text-center">
                 <h1 class="card-title text-success">@Model.ApprovedRequests</h1>
-                <h5 class="card-text">@Html.DisplayNameFor(model => model.TotalNumberOfRequests)</h5>
+                <h5 class="card-text">@Html.DisplayNameFor(model => model.ApprovedRequests)</h5>
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@
         <div class="card">
             <div class="card-body text-center">
                 <h1 class="card-title text-warning">@Model.PendingRequests</h1>
-                <h5 class="card-text">@Html.DisplayNameFor(model => model.TotalNumberOfRequests)</h5>
+                <h5 class="card-text">@Html.DisplayNameFor(model => model.PendingRequests)</h5>
             </div>
         </div>
     </div>
@@ -37,18 +37,11 @@
         <div class="card">
             <div class="card-body text-center">
                 <h1 class="card-title text-danger">@Model.DeclinedRequests</h1>
-                <h5 class="card-text">@Html.DisplayNameFor(model => model.TotalNumberOfRequests)</h5>
+                <h5 class="card-text">@Html.DisplayNameFor(model => model.DeclinedRequests)</h5>
             </div>
         </div>
     </div>
-    <div class="col">
-        <div class="card">
-            <div class="card-body text-center">
-                <h1 class="card-title text-primary">@Model.TotalNumberOfRequests</h1>
-                <h5 class="card-text">@Html.DisplayNameFor(model => model.TotalNumberOfRequests)</h5>
-            </div>
-        </div>
-    </div>
+    
 </div>
 
 
@@ -117,7 +110,7 @@ else
         <td>
             @if (item.LeaveRequestStatus == LeaveRequestStatusEnum.Pending)
             {
-                <a asp-action="Review" data-id="@item.Id" class="btn btn-check">Review</a>
+                <a asp-action="Review" asp-route-id="@item.Id" class="btn btn-primary">Review</a>
             }
         </td>
     </tr>

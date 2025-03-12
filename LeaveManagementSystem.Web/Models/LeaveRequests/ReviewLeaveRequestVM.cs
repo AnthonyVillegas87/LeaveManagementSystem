@@ -6,5 +6,7 @@ namespace LeaveManagementSystem.Web.Models.LeaveRequests;
 public class ReviewLeaveRequestVM : LeaveRequestListVM
 {
     public EmployeeListVm Employee { get; set; } = new EmployeeListVm();
-    public string RequestComments { get; set; } = string.Empty;
+    
+    [DisplayName("Additional Information")]
+    public string RequestComments { get; set; }
 }

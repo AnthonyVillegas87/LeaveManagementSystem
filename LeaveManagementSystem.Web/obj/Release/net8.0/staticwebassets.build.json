@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XZg3Y8nOqludhz89z7OXDAzyhUEVS54OOPgRjrl7RGU=",
+  "Hash": "aB9tq4zTI/xjmWkl4lXFbeZDh4BU5VvOdf216LV2CLI=",
   "Source": "LeaveManagementSystem.Web",
   "BasePath": "_content/LeaveManagementSystem.Web",
   "Mode": "Default",
@@ -2333,6 +2333,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Identity": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/sweetalert/sweetalert2.all.min.js",
+      "SourceId": "LeaveManagementSystem.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/",
+      "BasePath": "_content/LeaveManagementSystem.Web",
+      "RelativePath": "lib/sweetalert/sweetalert2.all.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/lib/sweetalert/sweetalert2.all.min.js"
     }
   ]
 }
