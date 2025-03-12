@@ -8,7 +8,7 @@ public interface ILeaveRequestService
     Task<List<LeaveRequestListVM>> GetEmployeeLeaveRequests();
     Task<EmployeeLeaveRequestListVM> GetAllLeaveRequests();
     Task CancelLeaveRequest(int id);
-    Task ReviewLeaveRequest(ReviewLeaveRequestVM model);
+    Task ReviewLeaveRequest(int leaveRequestId, bool isApproved);
     Task<bool> RequestDatesExceedAllocation(LeaveRequestCreateVm model);
     Task<ReviewLeaveRequestVM> GetLeaveRequestForReview(int id);
 }

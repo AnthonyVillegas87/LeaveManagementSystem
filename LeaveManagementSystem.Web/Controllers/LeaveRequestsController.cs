@@ -75,9 +75,10 @@ public class LeaveRequestsController(ILeaveTypesService leaveTypesService, ILeav
     // Admin/Supervisor requests
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Review(/*VM use*/)
+    public async Task<IActionResult> Review(int id, bool approved)
     {
-        return View();
+        await leaveRequestService.ReviewLeaveRequest(id, approved);
+        return RedirectToAction(nameof(ListRequests));
     }
     
 }

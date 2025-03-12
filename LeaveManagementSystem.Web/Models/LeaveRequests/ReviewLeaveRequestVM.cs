@@ -1,9 +1,10 @@
 using LeaveManagementSystem.Web.Models.LeaveAllocations;
-using LeaveManagementSystem.Web.Models.LeaveRequests;
+using System.ComponentModel;
 
-namespace LeaveManagementSystem.Web.Services.LeaveRequests;
+namespace LeaveManagementSystem.Web.Models.LeaveRequests;
 
 public class ReviewLeaveRequestVM : LeaveRequestListVM
 {
     public EmployeeListVm Employee { get; set; } = new EmployeeListVm();
+    public string RequestComments { get; set; } = string.Empty;
 }

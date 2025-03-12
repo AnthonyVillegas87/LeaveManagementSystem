@@ -93,9 +93,23 @@ public partial class LeaveRequestsService(IMapper mapper, UserManager<Applicatio
        await context.SaveChangesAsync();
     }
 
-    public Task ReviewLeaveRequest(ReviewLeaveRequestVM model)
+    public async Task ReviewLeaveRequest(int leaveRequestId, bool isApproved)
     {
-        throw new NotImplementedException();
+        var user = await userManager.GetUserAsync(httpContextAccessor.HttpContext?.User);
+        var leaveRequest = await context.LeaveRequest.FindAsync(leaveRequestId);
+        leaveRequest.LeaveRequestStatusId = isApproved ? (int)LeaveRequestStatusEnum.Approved : (int)LeaveRequestStatusEnum.Declined;
+
+
+        leaveRequest.ReviewerId = user.Id;
+
+        if (!isApproved)
+        {
+            var allocation = await context.LeaveAllocations
+                .FirstAsync(q => q.LeaveTypeId == leaveRequest.LeaveTypeId && q.EmployeeId == leaveRequest.EmployeeId);
+            var numberOfDays = leaveRequest.EndDate.DayNumber - leaveRequest.StartDate.DayNumber;
+            allocation.Days += numberOfDays;
+        }
+        await context.SaveChangesAsync();
     }
 
     public async Task<bool> RequestDatesExceedAllocation(LeaveRequestCreateVm model)
@@ -122,6 +136,7 @@ public partial class LeaveRequestsService(IMapper mapper, UserManager<Applicatio
             LeaveRequestStatus = (LeaveRequestStatusEnum)leaveRequest.LeaveRequestStatusId,
             NumberOfDays = leaveRequest.EndDate.DayNumber - leaveRequest.StartDate.DayNumber,
             LeaveType = leaveRequest.Type?.Name,
+            RequestComments = leaveRequest.RequestComments, 
             Employee = new EmployeeListVm()
             {
                 Id = leaveRequest.EmployeeId,
