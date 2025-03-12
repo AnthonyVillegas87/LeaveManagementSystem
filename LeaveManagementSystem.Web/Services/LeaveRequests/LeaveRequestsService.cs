@@ -25,9 +25,13 @@ public partial class LeaveRequestsService(IMapper mapper, UserManager<Applicatio
        context.Add(leaveRequest);
        
        //deduct allocation days based on request
+       var currentDate = DateTime.Now;
+       var period = await context.Periods.SingleOrDefaultAsync(q => q.EndDate.Year == currentDate.Year);
        var numberOfDays = model.EndDate.DayNumber - model.StartDate.DayNumber;
        var allocationToDeduct = await context.LeaveAllocations
-           .FirstAsync(q => q.LeaveTypeId == model.LeaveTypeId && q.EmployeeId == user.Id);
+           .FirstAsync(q => q.LeaveTypeId == model.LeaveTypeId
+                            && q.EmployeeId == user.Id
+                            && q.PeriodId == period.Id);
        
        allocationToDeduct.Days -= numberOfDays;
        await context.SaveChangesAsync();
@@ -84,9 +88,14 @@ public partial class LeaveRequestsService(IMapper mapper, UserManager<Applicatio
        var leaveRequest = await context.LeaveRequest.FindAsync(id);
        leaveRequest.LeaveRequestStatusId = (int) LeaveRequestStatusEnum.Canceled;
        
+       
+       var currentDate = DateTime.Now;
+       var period = await context.Periods.SingleOrDefaultAsync(q => q.EndDate.Year == currentDate.Year);
        var numberOfDays = leaveRequest.EndDate.DayNumber - leaveRequest.StartDate.DayNumber;
        var allocation = await context.LeaveAllocations
-           .FirstAsync(q => q.LeaveTypeId == leaveRequest.LeaveTypeId && q.EmployeeId == leaveRequest.EmployeeId);
+           .FirstAsync(q => q.LeaveTypeId == leaveRequest.LeaveTypeId 
+                            && q.EmployeeId == leaveRequest.EmployeeId
+                            && q.PeriodId == period.Id);
        
        allocation.Days += numberOfDays;
        
@@ -104,8 +113,12 @@ public partial class LeaveRequestsService(IMapper mapper, UserManager<Applicatio
 
         if (!isApproved)
         {
+            var currentDate = DateTime.Now;
+            var period = await context.Periods.SingleOrDefaultAsync(q => q.EndDate.Year == currentDate.Year);
             var allocation = await context.LeaveAllocations
-                .FirstAsync(q => q.LeaveTypeId == leaveRequest.LeaveTypeId && q.EmployeeId == leaveRequest.EmployeeId);
+                .FirstAsync(q => q.LeaveTypeId == leaveRequest.LeaveTypeId 
+                                 && q.EmployeeId == leaveRequest.EmployeeId
+                                 && q.PeriodId == period.Id);
             var numberOfDays = leaveRequest.EndDate.DayNumber - leaveRequest.StartDate.DayNumber;
             allocation.Days += numberOfDays;
         }
@@ -115,9 +128,13 @@ public partial class LeaveRequestsService(IMapper mapper, UserManager<Applicatio
     public async Task<bool> RequestDatesExceedAllocation(LeaveRequestCreateVm model)
     {
         var user = await userManager.GetUserAsync(httpContextAccessor.HttpContext?.User);
+        var currentDate = DateTime.Now;
+        var period = await context.Periods.SingleOrDefaultAsync(q => q.EndDate.Year == currentDate.Year);
         var numberOfDays = model.EndDate.DayNumber - model.StartDate.DayNumber;
         var allocation = await context.LeaveAllocations
-            .FirstAsync(q => q.LeaveTypeId == model.LeaveTypeId && q.EmployeeId == user.Id);
+            .FirstAsync(q => q.LeaveTypeId == model.LeaveTypeId 
+                             && q.EmployeeId == user.Id
+                             && q.PeriodId == period.Id);
         
         return allocation.Days < numberOfDays;
     }
