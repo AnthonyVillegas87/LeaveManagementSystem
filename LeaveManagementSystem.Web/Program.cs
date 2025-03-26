@@ -7,6 +7,7 @@ using LeaveManagementSystem.Web.Services.LeaveTypes;
 using LeaveManagementSystem.Web.Services.Periods;
 using LeaveManagementSystem.Web.Services.Users;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 

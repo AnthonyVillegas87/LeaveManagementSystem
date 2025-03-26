@@ -197,6 +197,106 @@
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/AUTHORS.txt",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/AUTHORS.txt"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/external/jquery/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/external/jquery/jquery.js"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/images/ui-bg_glass_20_555555_1x400.png",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/images/ui-bg_glass_20_555555_1x400.png"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/images/ui-bg_glass_40_0078a3_1x400.png",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/images/ui-bg_glass_40_0078a3_1x400.png"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/images/ui-bg_glass_40_ffc73d_1x400.png",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/images/ui-bg_glass_40_ffc73d_1x400.png"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/images/ui-bg_gloss-wave_25_333333_500x100.png",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/images/ui-bg_gloss-wave_25_333333_500x100.png"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/images/ui-bg_highlight-soft_80_eeeeee_1x100.png",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/images/ui-bg_highlight-soft_80_eeeeee_1x100.png"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/images/ui-bg_inset-soft_25_000000_1x100.png",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/images/ui-bg_inset-soft_25_000000_1x100.png"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/images/ui-bg_inset-soft_30_f58400_1x100.png",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/images/ui-bg_inset-soft_30_f58400_1x100.png"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/images/ui-icons_222222_256x240.png",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/images/ui-icons_222222_256x240.png"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/images/ui-icons_4b8e0b_256x240.png",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/images/ui-icons_4b8e0b_256x240.png"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/images/ui-icons_a83300_256x240.png",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/images/ui-icons_a83300_256x240.png"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/images/ui-icons_cccccc_256x240.png",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/images/ui-icons_cccccc_256x240.png"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/images/ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/images/ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/index.html",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/index.html"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/jquery-ui.css",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/jquery-ui.css"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/jquery-ui.js",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/jquery-ui.js"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/jquery-ui.min.css",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/jquery-ui.min.css"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/jquery-ui.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/jquery-ui.min.js"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/jquery-ui.structure.css",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/jquery-ui.structure.css"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/jquery-ui.structure.min.css",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/jquery-ui.structure.min.css"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/jquery-ui.theme.css",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/jquery-ui.theme.css"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/jquery-ui.theme.min.css",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/jquery-ui.theme.min.css"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-ui-1.14.1.custom/package.json",
+      "PackagePath": "staticwebassets/lib/jquery-ui-1.14.1.custom/package.json"
+    },
+    {
       "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
