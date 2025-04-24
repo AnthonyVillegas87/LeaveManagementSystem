@@ -16,10 +16,10 @@ public class LeaveRequestsController(ILeaveTypesService leaveTypesService, ILeav
     }
     
     // Employee Create requests
-    public async Task<IActionResult> Create()
+    public async Task<IActionResult> Create(int? leaveTypeId)
     {
         var leaveTypes = await leaveTypesService.GetAllAsync();
-        var leaveTypesList = new SelectList(leaveTypes, "Id", "Name");
+        var leaveTypesList = new SelectList(leaveTypes, "Id", "Name", leaveTypeId);
         var model = new LeaveRequestCreateVm()
         {
             StartDate = DateOnly.FromDateTime(DateTime.Now),
@@ -59,6 +59,7 @@ public class LeaveRequestsController(ILeaveTypesService leaveTypesService, ILeav
     }
     
     // Admin/Supervisor review requests
+    [Authorize(Policy = "AdminSupervisorOnly")]
     public async Task<IActionResult> ListRequests()
     {
         var model = await leaveRequestService.GetAllLeaveRequests();
