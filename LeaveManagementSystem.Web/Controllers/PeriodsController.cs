@@ -2,10 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LeaveManagementSystem.Common.Static;
+using LeaveManagementSystem.Data;
+using LeaveManagementSystem.Web.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using LeaveManagementSystem.Web.Data;
 
 namespace LeaveManagementSystem.Web.Controllers
 {

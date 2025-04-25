@@ -3,6 +3,7 @@
 #nullable disable
 
 using System.Security.Claims;
+using LeaveManagementSystem.Data;
 using Microsoft.Extensions.Options;
 
 namespace LeaveManagementSystem.Web.Areas.Identity.Pages.Account

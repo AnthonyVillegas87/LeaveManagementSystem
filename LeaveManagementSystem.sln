@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagementSystem.Web", "LeaveManagementSystem.Web\LeaveManagementSystem.Web.csproj", "{7F043E66-10A4-4765-B475-7415C2F05424}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagementSystem.Common", "LeaveManagementSystem.Common\LeaveManagementSystem.Common.csproj", "{349B66ED-7602-4F6A-8746-16E6EB6AA246}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagementSystem.Data", "LeaveManagementSystem.Data\LeaveManagementSystem.Data.csproj", "{1DF44317-EFBF-4D63-8BC9-FC7F12F3C8B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagementSystem.Application", "LeaveManagementSystem.Application\LeaveManagementSystem.Application.csproj", "{F8C01C91-6545-4D82-8554-2BA733BCD6C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,17 @@ Global
 		{7F043E66-10A4-4765-B475-7415C2F05424}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F043E66-10A4-4765-B475-7415C2F05424}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F043E66-10A4-4765-B475-7415C2F05424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{349B66ED-7602-4F6A-8746-16E6EB6AA246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{349B66ED-7602-4F6A-8746-16E6EB6AA246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{349B66ED-7602-4F6A-8746-16E6EB6AA246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{349B66ED-7602-4F6A-8746-16E6EB6AA246}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DF44317-EFBF-4D63-8BC9-FC7F12F3C8B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DF44317-EFBF-4D63-8BC9-FC7F12F3C8B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DF44317-EFBF-4D63-8BC9-FC7F12F3C8B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DF44317-EFBF-4D63-8BC9-FC7F12F3C8B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8C01C91-6545-4D82-8554-2BA733BCD6C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8C01C91-6545-4D82-8554-2BA733BCD6C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8C01C91-6545-4D82-8554-2BA733BCD6C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8C01C91-6545-4D82-8554-2BA733BCD6C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

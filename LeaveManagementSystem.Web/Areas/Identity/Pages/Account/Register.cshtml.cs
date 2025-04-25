@@ -3,7 +3,9 @@
 #nullable disable
 
 using System.Collections.Immutable;
-using LeaveManagementSystem.Web.Services.LeaveAllocations;
+using LeaveManagementSystem.Application.Services.LeaveAllocations;
+using LeaveManagementSystem.Common.Static;
+using LeaveManagementSystem.Data;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 

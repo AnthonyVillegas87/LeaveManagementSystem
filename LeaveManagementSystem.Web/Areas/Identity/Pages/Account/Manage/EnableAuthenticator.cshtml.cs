@@ -3,6 +3,7 @@
 #nullable disable
 
 using System.Globalization;
+using LeaveManagementSystem.Data;
 
 namespace LeaveManagementSystem.Web.Areas.Identity.Pages.Account.Manage
 {

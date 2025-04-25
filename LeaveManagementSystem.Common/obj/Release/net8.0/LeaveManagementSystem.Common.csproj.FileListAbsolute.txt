@@ -1,0 +1,12 @@
+/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Common/bin/Release/net8.0/LeaveManagementSystem.Common.deps.json
+/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Common/bin/Release/net8.0/LeaveManagementSystem.Common.dll
+/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Common/bin/Release/net8.0/LeaveManagementSystem.Common.pdb
+/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Common/obj/Release/net8.0/LeaveManagementSystem.Common.GeneratedMSBuildEditorConfig.editorconfig
+/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Common/obj/Release/net8.0/LeaveManagementSystem.Common.AssemblyInfoInputs.cache
+/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Common/obj/Release/net8.0/LeaveManagementSystem.Common.AssemblyInfo.cs
+/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Common/obj/Release/net8.0/LeaveManagementSystem.Common.csproj.CoreCompileInputs.cache
+/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Common/obj/Release/net8.0/LeaveManagementSystem.Common.sourcelink.json
+/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Common/obj/Release/net8.0/LeaveManagementSystem.Common.dll
+/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Common/obj/Release/net8.0/refint/LeaveManagementSystem.Common.dll
+/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Common/obj/Release/net8.0/LeaveManagementSystem.Common.pdb
+/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Common/obj/Release/net8.0/ref/LeaveManagementSystem.Common.dll

@@ -1,11 +1,10 @@
 using AutoMapper;
-using LeaveManagementSystem.Web.Common;
+using LeaveManagementSystem.Application.Models.LeaveTypes;
+using LeaveManagementSystem.Application.Services.LeaveTypes;
+using LeaveManagementSystem.Common.Static;
+using LeaveManagementSystem.Web.Data;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using LeaveManagementSystem.Web.Data;
-using LeaveManagementSystem.Web.Models.LeaveTypes;
-using LeaveManagementSystem.Web.Services;
-using LeaveManagementSystem.Web.Services.LeaveTypes;
 
 namespace LeaveManagementSystem.Web.Controllers
 {
