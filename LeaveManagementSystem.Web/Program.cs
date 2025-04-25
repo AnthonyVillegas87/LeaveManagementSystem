@@ -1,5 +1,6 @@
 using LeaveManagementSystem.Application;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +10,9 @@ builder.Services.AddControllersWithViews();
 DataServicesRegistration.AddDataServices(builder.Services, builder.Configuration);
 ApplicationServicesRegistration.AddApplicationServices(builder.Services);
 
-
+builder.Host.UseSerilog((ctx, config) => config.WriteTo.Console()
+    .ReadFrom.Configuration(ctx.Configuration)
+);
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("AdminSupervisorOnly", policy =>
