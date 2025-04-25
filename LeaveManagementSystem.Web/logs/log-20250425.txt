@@ -1,0 +1,179 @@
+2025-04-25 11:54:30.641 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 11:54:30.702 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 11:54:30.703 -05:00 [INF] Hosting environment: Development
+2025-04-25 11:54:30.703 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 11:54:31.137 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 11:54:39.895 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-25 11:54:41.306 -05:00 [INF] User logged in.
+2025-04-25 11:57:05.452 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Sequence contains no elements.
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at LeaveManagementSystem.Application.Services.LeaveRequests.LeaveRequestsService.GetLeaveRequestForReview(Int32 id) in /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Application/Services/LeaveRequests/LeaveRequestsService.cs:line 119
+   at LeaveManagementSystem.Web.Controllers.LeaveRequestsController.Review(Int32 leaveRequestId) in /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/Controllers/LeaveRequestsController.cs:line 72
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-25 11:57:34.882 -05:00 [INF] Application is shutting down...
+2025-04-25 15:40:02.462 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 15:40:02.527 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 15:40:02.528 -05:00 [INF] Hosting environment: Development
+2025-04-25 15:40:02.529 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 15:40:04.912 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-25 15:40:06.189 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 15:45:19.972 -05:00 [INF] Application is shutting down...
+2025-04-25 15:45:54.752 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 15:45:54.810 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 15:45:54.811 -05:00 [INF] Hosting environment: Development
+2025-04-25 15:45:54.811 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 15:45:55.490 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 15:52:49.885 -05:00 [INF] Application is shutting down...
+2025-04-25 15:52:57.835 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 15:52:57.894 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 15:52:57.896 -05:00 [INF] Hosting environment: Development
+2025-04-25 15:52:57.896 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 15:52:58.229 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 15:59:11.090 -05:00 [INF] Application is shutting down...
+2025-04-25 15:59:19.192 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 15:59:19.249 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 15:59:19.250 -05:00 [INF] Hosting environment: Development
+2025-04-25 15:59:19.250 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 15:59:19.961 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 16:02:29.424 -05:00 [INF] Application is shutting down...
+2025-04-25 16:02:37.001 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 16:02:37.061 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 16:02:37.062 -05:00 [INF] Hosting environment: Development
+2025-04-25 16:02:37.062 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 16:02:37.766 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 16:07:15.497 -05:00 [INF] Application is shutting down...
+2025-04-25 16:07:23.411 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 16:07:23.471 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 16:07:23.473 -05:00 [INF] Hosting environment: Development
+2025-04-25 16:07:23.473 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 16:07:23.742 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 16:09:35.480 -05:00 [INF] Application is shutting down...
+2025-04-25 16:09:43.177 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 16:09:43.229 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 16:09:43.230 -05:00 [INF] Hosting environment: Development
+2025-04-25 16:09:43.230 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 16:09:44.043 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 16:11:05.794 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-25 16:22:15.416 -05:00 [INF] Application is shutting down...
+2025-04-25 16:22:27.264 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 16:22:27.321 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 16:22:27.322 -05:00 [INF] Hosting environment: Development
+2025-04-25 16:22:27.322 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 16:22:28.294 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 16:24:46.756 -05:00 [INF] Application is shutting down...
+2025-04-25 16:24:55.289 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 16:24:55.347 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 16:24:55.348 -05:00 [INF] Hosting environment: Development
+2025-04-25 16:24:55.348 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 16:24:56.076 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 16:25:00.707 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-25 16:28:39.402 -05:00 [INF] Application is shutting down...
+2025-04-25 16:28:47.173 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 16:28:47.229 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 16:28:47.230 -05:00 [INF] Hosting environment: Development
+2025-04-25 16:28:47.230 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 16:28:47.971 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 16:31:07.937 -05:00 [INF] Application is shutting down...
+2025-04-25 16:31:53.075 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 16:31:53.132 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 16:31:53.133 -05:00 [INF] Hosting environment: Development
+2025-04-25 16:31:53.133 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 16:31:54.207 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 16:32:02.661 -05:00 [INF] User logged out.
+2025-04-25 16:32:21.059 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-25 16:32:22.380 -05:00 [INF] User logged in.
+2025-04-25 16:32:45.902 -05:00 [INF] User logged out.
+2025-04-25 16:32:57.930 -05:00 [INF] User logged in.
+2025-04-25 16:35:32.380 -05:00 [INF] User logged out.
+2025-04-25 16:42:05.541 -05:00 [INF] Application is shutting down...
+2025-04-25 16:42:16.134 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 16:42:16.215 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 16:42:16.216 -05:00 [INF] Hosting environment: Development
+2025-04-25 16:42:16.216 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 16:42:16.646 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 16:42:28.738 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-25 16:42:30.048 -05:00 [INF] User logged in.
+2025-04-25 16:50:23.873 -05:00 [INF] Application is shutting down...
+2025-04-25 16:52:15.522 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 16:52:15.584 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 16:52:15.585 -05:00 [INF] Hosting environment: Development
+2025-04-25 16:52:15.585 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 16:52:16.699 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 16:57:19.574 -05:00 [INF] Application is shutting down...
+2025-04-25 16:57:28.512 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 16:57:28.569 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 16:57:28.570 -05:00 [INF] Hosting environment: Development
+2025-04-25 16:57:28.571 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 16:57:29.262 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 16:58:16.454 -05:00 [INF] Application is shutting down...
+2025-04-25 16:58:23.851 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 16:58:23.926 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 16:58:23.927 -05:00 [INF] Hosting environment: Development
+2025-04-25 16:58:23.927 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 16:58:24.317 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 16:59:21.169 -05:00 [INF] Application is shutting down...
+2025-04-25 16:59:23.569 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 16:59:23.626 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 16:59:23.627 -05:00 [INF] Hosting environment: Development
+2025-04-25 16:59:23.627 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 16:59:24.139 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 16:59:52.007 -05:00 [INF] Application is shutting down...
+2025-04-25 16:59:54.356 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 16:59:54.418 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 16:59:54.419 -05:00 [INF] Hosting environment: Development
+2025-04-25 16:59:54.419 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 16:59:55.092 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 17:01:05.183 -05:00 [INF] Application is shutting down...
+2025-04-25 17:01:13.713 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 17:01:13.776 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 17:01:13.778 -05:00 [INF] Hosting environment: Development
+2025-04-25 17:01:13.778 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 17:01:14.440 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 17:02:28.085 -05:00 [INF] Application is shutting down...
+2025-04-25 17:02:35.100 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 17:02:35.152 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 17:02:35.153 -05:00 [INF] Hosting environment: Development
+2025-04-25 17:02:35.153 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 17:02:35.873 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 17:07:29.044 -05:00 [INF] Application is shutting down...
+2025-04-25 17:07:36.384 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 17:07:36.435 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 17:07:36.436 -05:00 [INF] Hosting environment: Development
+2025-04-25 17:07:36.437 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 17:07:37.176 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 17:10:45.422 -05:00 [INF] Application is shutting down...
+2025-04-25 17:10:52.511 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 17:10:52.601 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 17:10:52.602 -05:00 [INF] Hosting environment: Development
+2025-04-25 17:10:52.602 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 17:10:53.004 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 17:11:47.994 -05:00 [INF] Application is shutting down...
+2025-04-25 17:11:54.957 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 17:11:55.012 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 17:11:55.013 -05:00 [INF] Hosting environment: Development
+2025-04-25 17:11:55.013 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 17:11:56.074 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 17:12:41.000 -05:00 [INF] Application is shutting down...
+2025-04-25 17:12:43.569 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-25 17:12:43.621 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 17:12:43.623 -05:00 [INF] Hosting environment: Development
+2025-04-25 17:12:43.623 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-25 17:12:45.256 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-25 17:12:46.465 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-25 17:15:18.265 -05:00 [INF] Application is shutting down...
