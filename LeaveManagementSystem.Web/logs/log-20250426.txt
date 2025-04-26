@@ -1,0 +1,20 @@
+2025-04-26 12:57:52.914 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 12:57:52.972 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 12:57:52.973 -05:00 [INF] Hosting environment: Development
+2025-04-26 12:57:52.973 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 12:57:55.242 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 12:58:16.506 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-26 13:05:46.231 -05:00 [INF] Application is shutting down...
+2025-04-26 13:05:54.299 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 13:05:54.379 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 13:05:54.380 -05:00 [INF] Hosting environment: Development
+2025-04-26 13:05:54.381 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 13:05:54.448 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 13:06:08.119 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-26 13:06:36.005 -05:00 [INF] Application is shutting down...
+2025-04-26 13:06:42.886 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 13:06:42.960 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 13:06:42.962 -05:00 [INF] Hosting environment: Development
+2025-04-26 13:06:42.962 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 13:06:43.029 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 13:06:53.661 -05:00 [INF] Application is shutting down...
