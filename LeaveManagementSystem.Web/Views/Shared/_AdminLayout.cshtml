@@ -9,6 +9,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>@ViewData["Title"] - Leave Management System</title>
+  <link rel="shortcut icon" type="image/png" href="~/favicon.ico">
   <link rel="stylesheet" href="~/css/styles.min.css" />
   <link rel="stylesheet" href="~/lib/jquery-ui-1.14.1.custom/jquery-ui.min.css" />
   <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
@@ -23,10 +24,10 @@
 <!-- Sidebar Start -->
     <aside class="left-sidebar">
       <!-- Sidebar scroll-->
-      <div>
-        <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="/index.html" class="text-nowrap logo-img">
-            <img src="/wwwroot/images/logos/logo.svg" alt="" />
+      <div class="scroll-sidebar" data-simplebar>
+        <div class="d-flex mb-4 align-items-center justify-content-between">
+          <a href="/index.html" class="text-nowrap logo-img ms-0 ms-md-1">
+            <img src="~/images/leave-2.png" width="180" alt="" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
             <i class="ti ti-x fs-6"></i>
@@ -156,7 +157,6 @@
     <!--  Main wrapper -->
     <div class="body-wrapper">
       <!--  Header Start -->
-          <header class="app-header">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <ul class="navbar-nav">
                         <li class="nav-item d-block d-xl-none">
@@ -197,7 +197,6 @@
                         </div>
                     }
                 </nav>
-          </header>   
           <!--  Header End -->
       <div class="body-wrapper-inner">
         <div class="container-fluid">

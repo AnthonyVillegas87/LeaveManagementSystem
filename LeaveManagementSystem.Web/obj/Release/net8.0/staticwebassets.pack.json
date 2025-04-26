@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets/images/backgrounds/sidebar-buynow.png"
     },
     {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/images/leave-2.png",
+      "PackagePath": "staticwebassets/images/leave-2.png"
+    },
+    {
       "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/images/logos/favicon.png",
       "PackagePath": "staticwebassets/images/logos/favicon.png"
     },
@@ -63,6 +67,14 @@
     {
       "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/images/logos/logo.svg",
       "PackagePath": "staticwebassets/images/logos/logo.svg"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/images/padlock.png",
+      "PackagePath": "staticwebassets/images/padlock.png"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/images/productivity.png",
+      "PackagePath": "staticwebassets/images/productivity.png"
     },
     {
       "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/images/products/s1.jpg",
@@ -115,6 +127,10 @@
     {
       "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/images/profile/user-8.jpg",
       "PackagePath": "staticwebassets/images/profile/user-8.jpg"
+    },
+    {
+      "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/images/registration.png",
+      "PackagePath": "staticwebassets/images/registration.png"
     },
     {
       "Id": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/images/user.svg",

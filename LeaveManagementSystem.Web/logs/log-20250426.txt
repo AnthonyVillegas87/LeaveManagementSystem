@@ -18,3 +18,138 @@
 2025-04-26 13:06:42.962 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
 2025-04-26 13:06:43.029 -05:00 [WRN] Failed to determine the https port for redirect.
 2025-04-26 13:06:53.661 -05:00 [INF] Application is shutting down...
+2025-04-26 13:28:56.368 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 13:28:56.433 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 13:28:56.434 -05:00 [INF] Hosting environment: Development
+2025-04-26 13:28:56.434 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 13:28:57.254 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 13:29:05.849 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-26 13:39:12.859 -05:00 [INF] Application is shutting down...
+2025-04-26 13:39:24.231 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 13:39:24.304 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 13:39:24.305 -05:00 [INF] Hosting environment: Development
+2025-04-26 13:39:24.305 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 13:39:24.519 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 13:39:29.011 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-26 13:41:53.020 -05:00 [INF] Application is shutting down...
+2025-04-26 13:42:01.269 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 13:42:01.352 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 13:42:01.353 -05:00 [INF] Hosting environment: Development
+2025-04-26 13:42:01.353 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 13:42:01.389 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 13:43:16.703 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-26 13:54:29.582 -05:00 [INF] Application is shutting down...
+2025-04-26 14:19:25.327 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 14:19:25.387 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 14:19:25.389 -05:00 [INF] Hosting environment: Development
+2025-04-26 14:19:25.389 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 14:19:26.044 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 14:19:46.182 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-26 14:21:38.867 -05:00 [INF] Application is shutting down...
+2025-04-26 14:21:47.265 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 14:21:47.339 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 14:21:47.341 -05:00 [INF] Hosting environment: Development
+2025-04-26 14:21:47.341 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 14:21:48.042 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 14:25:54.880 -05:00 [INF] Application is shutting down...
+2025-04-26 14:26:02.961 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 14:26:03.046 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 14:26:03.049 -05:00 [INF] Hosting environment: Development
+2025-04-26 14:26:03.049 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 14:26:03.719 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 14:26:15.869 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-26 14:27:47.779 -05:00 [INF] Application is shutting down...
+2025-04-26 14:27:49.835 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 14:27:49.886 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 14:27:49.887 -05:00 [INF] Hosting environment: Development
+2025-04-26 14:27:49.887 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 14:27:50.459 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 14:27:58.622 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-26 14:31:14.361 -05:00 [INF] Application is shutting down...
+2025-04-26 14:31:21.014 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 14:31:21.072 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 14:31:21.073 -05:00 [INF] Hosting environment: Development
+2025-04-26 14:31:21.073 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 14:31:21.278 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 14:31:28.596 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-26 14:32:29.391 -05:00 [INF] Application is shutting down...
+2025-04-26 14:32:37.807 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 14:32:37.872 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 14:32:37.874 -05:00 [INF] Hosting environment: Development
+2025-04-26 14:32:37.874 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 14:32:38.046 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 14:32:48.974 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-26 14:35:03.316 -05:00 [INF] Application is shutting down...
+2025-04-26 14:35:10.266 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 14:35:10.336 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 14:35:10.338 -05:00 [INF] Hosting environment: Development
+2025-04-26 14:35:10.338 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 14:35:10.511 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 14:35:42.496 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-26 14:37:09.559 -05:00 [INF] Application is shutting down...
+2025-04-26 14:37:16.434 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 14:37:16.507 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 14:37:16.508 -05:00 [INF] Hosting environment: Development
+2025-04-26 14:37:16.509 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 14:37:16.673 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 14:37:22.507 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-26 14:38:50.709 -05:00 [INF] Application is shutting down...
+2025-04-26 14:38:57.288 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 14:38:57.364 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 14:38:57.366 -05:00 [INF] Hosting environment: Development
+2025-04-26 14:38:57.366 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 14:38:57.586 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 14:39:07.653 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-26 14:42:23.119 -05:00 [INF] Application is shutting down...
+2025-04-26 14:44:23.212 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 14:44:23.265 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 14:44:23.266 -05:00 [INF] Hosting environment: Development
+2025-04-26 14:44:23.266 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 14:44:23.841 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 14:46:35.212 -05:00 [INF] Application is shutting down...
+2025-04-26 14:46:41.819 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 14:46:41.872 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 14:46:41.874 -05:00 [INF] Hosting environment: Development
+2025-04-26 14:46:41.874 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 14:46:42.060 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 14:46:53.449 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-26 14:53:25.447 -05:00 [INF] Application is shutting down...
+2025-04-26 14:53:31.834 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 14:53:31.887 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 14:53:31.888 -05:00 [INF] Hosting environment: Development
+2025-04-26 14:53:31.888 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 14:53:32.092 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 14:53:41.112 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-26 14:54:24.955 -05:00 [INF] Application is shutting down...
+2025-04-26 14:54:31.499 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 14:54:31.556 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 14:54:31.558 -05:00 [INF] Hosting environment: Development
+2025-04-26 14:54:31.558 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 14:54:31.644 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 14:54:48.172 -05:00 [INF] Application is shutting down...
+2025-04-26 14:54:54.594 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 14:54:54.666 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 14:54:54.668 -05:00 [INF] Hosting environment: Development
+2025-04-26 14:54:54.668 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 14:54:54.827 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 14:55:10.856 -05:00 [INF] Application is shutting down...
+2025-04-26 14:55:17.393 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 14:55:17.464 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 14:55:17.466 -05:00 [INF] Hosting environment: Development
+2025-04-26 14:55:17.466 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 14:55:17.515 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 14:55:23.511 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-26 14:55:48.012 -05:00 [INF] Application is shutting down...
+2025-04-26 14:55:54.496 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 14:55:54.549 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 14:55:54.550 -05:00 [INF] Hosting environment: Development
+2025-04-26 14:55:54.550 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 14:55:54.699 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 14:56:24.386 -05:00 [INF] Application is shutting down...
+2025-04-26 14:56:30.820 -05:00 [INF] Now listening on: http://localhost:5267
+2025-04-26 14:56:30.875 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 14:56:30.877 -05:00 [INF] Hosting environment: Development
+2025-04-26 14:56:30.877 -05:00 [INF] Content root path: /Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web
+2025-04-26 14:56:31.055 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 14:56:39.829 -05:00 [WRN] No store type was specified for the decimal property 'Days' on entity type 'LeaveAllocation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-26 14:58:47.303 -05:00 [INF] Application is shutting down...
