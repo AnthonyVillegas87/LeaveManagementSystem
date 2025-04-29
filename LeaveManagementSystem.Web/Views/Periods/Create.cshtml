@@ -5,9 +5,9 @@
      //Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Create</h1>
+<h1>Create Period of Leave</h1>
 
-<h4>Period</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -32,6 +32,7 @@
             
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary"/>
+                <a asp-action="Index" class="btn btn-primary">Back to List</a>
             </div>
         </form>
     </div>
@@ -43,4 +44,18 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $(function () {
+            $("#StartDate").datepicker({
+                dateFormat: 'yy-mm-dd',
+                changeMonth: true,
+                changeYear: true
+            });
+            $("#EndDate").datepicker({
+                dateFormat: 'yy-mm-dd',
+                changeMonth: true,
+                changeYear: true
+            });
+        });
+    </script>
 }

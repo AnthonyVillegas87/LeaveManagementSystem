@@ -55,7 +55,7 @@
                 @Html.DisplayFor(modelItem => item.NumberOfDays)
             </td>
             <td>
-               <span class="badge rounded-pill bg-@className">@item.LeaveRequestStatus.ToString()</span>
+               <span class="badge rounded-pill bg-@className text-dark">@item.LeaveRequestStatus.ToString()</span>
             </td>
             <td>
                 @if (item.LeaveRequestStatus == LeaveRequestStatusEnum.Pending)

@@ -67,9 +67,9 @@ public class LeaveRequestsController(ILeaveTypesService leaveTypesService, ILeav
     }
     
     // Admin/Supervisor requests
-    public async Task<IActionResult> Review(int leaveRequestId)
+    public async Task<IActionResult> Review(int id)
     {
-        var model = await leaveRequestService.GetLeaveRequestForReview(leaveRequestId);
+        var model = await leaveRequestService.GetLeaveRequestForReview(id);
         return View(model);
     }
     

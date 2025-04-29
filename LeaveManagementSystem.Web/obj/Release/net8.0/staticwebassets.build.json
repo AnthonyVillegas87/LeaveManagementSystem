@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7BXSEngvG1GiJb4sMlIQQj+kwTn8d6b0ASIBLahQy68=",
+  "Hash": "RqbePfia2zO1Ki1Q+Av9TzKg5bGIZ2xkk97nc0Y62+w=",
   "Source": "LeaveManagementSystem.Web",
   "BasePath": "_content/LeaveManagementSystem.Web",
   "Mode": "Default",
@@ -14208,6 +14208,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/scss/variables/_variables.scss"
+    },
+    {
+      "Identity": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/templates/email_layout.html",
+      "SourceId": "LeaveManagementSystem.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/anthonyvillegas/RiderProjects/LeaveManagementSystem/LeaveManagementSystem.Web/wwwroot/",
+      "BasePath": "_content/LeaveManagementSystem.Web",
+      "RelativePath": "templates/email_layout.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/templates/email_layout.html"
     }
   ]
 }

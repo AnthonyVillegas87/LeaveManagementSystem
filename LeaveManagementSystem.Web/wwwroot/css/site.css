@@ -21,6 +21,12 @@ body {
     margin-bottom: 60px;
 }
 
+#main-wrapper[data-layout=vertical][data-sidebar-position=fixed] .left-sidebar
+{
+    position: fixed;
+    top: 0px !important;
+}
+
 /*img {*/
 /*    display: block;*/
 /*    max-width: 100%;*/

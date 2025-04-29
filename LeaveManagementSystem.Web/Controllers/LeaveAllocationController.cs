@@ -54,7 +54,7 @@ public class LeaveAllocationController(ILeaveAllocationsService _leaveAllocation
         if (ModelState.IsValid)
         {
             await _leaveAllocationsService.EditAllocation(model);
-            return RedirectToAction(nameof(Details), new { employeeId = model.EmployeeList.Id});
+            return RedirectToAction(nameof(Details), new { employeeId = model.Employee.Id});
         }
         
         // When NOT valid, track # of days submitted in form. 

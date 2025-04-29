@@ -1,6 +1,6 @@
 @using LeaveManagementSystem.Application.Services.LeaveRequests
 @using Microsoft.AspNetCore.Mvc.TagHelpers
-@model LeaveManagementSystem.Application.Models.LeaveRequests.EmployeeLeaveRequestListVM
+@model EmployeeLeaveRequestListVM
 
 @{
     ViewData["Title"] = "View Leave Requests";
@@ -83,14 +83,23 @@ else
     <tbody>
     @foreach (var item in Model.LeaveRequests)
     {
-    var className = item.LeaveRequestStatus switch
-    {
-    LeaveRequestStatusEnum.Pending => "warning",
-    LeaveRequestStatusEnum.Approved => "approved",
-    LeaveRequestStatusEnum.Declined => "danger",
-    LeaveRequestStatusEnum.Canceled => "dark",
-    _ => string.Empty
-    };
+        var className = string.Empty;
+        if (item.LeaveRequestStatus == LeaveRequestStatusEnum.Pending)
+        {
+            className = "warning";
+        }
+        else if (item.LeaveRequestStatus == LeaveRequestStatusEnum.Approved)
+        {
+            className = "success";
+        }
+        else if (item.LeaveRequestStatus == LeaveRequestStatusEnum.Declined)
+        {
+            className = "danger";
+        }
+        else if (item.LeaveRequestStatus == LeaveRequestStatusEnum.Canceled)
+        {
+            className = "dark";
+        }
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.LeaveType)
